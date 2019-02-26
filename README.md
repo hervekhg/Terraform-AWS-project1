@@ -12,3 +12,14 @@ The code contains these AWS resources:
 - SQS
 
 The keys are store in Consul
+
+# Command To Deploy
+The project contains 3 terraform stack. In order to deploy it, you should deploy each stack
+<code bash>
+  # Deploy stack RDS
+  terraform apply -auto-approve --var install_name=${install_name} --var version_lot="${version_lot}"
+  # Deploy Stack Core
+  terraform apply -auto-approve --var install_name=${install_name} --var version_lot="${version_lot}"
+  # Deploy Stack Common
+  terraform apply -auto-approve --var install_name=${install_name} --var version_lot="${version_lot}"
+</code>
